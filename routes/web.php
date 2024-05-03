@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('image-store', [App\Http\Controllers\ImageController::class, 'storeImage'])->name('image-store')->middleware('auth');
